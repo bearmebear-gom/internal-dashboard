@@ -102,7 +102,7 @@ st.markdown(f"""
     }}
     
     .section-desc {{
-        font-size: 32px !important; /* Exactly half of h1 (64px) per user request */
+        font-size: 20px !important; /* Scaled back down to professional large */
         color: {APPLE_PALETTE['secondary_content']}; 
         margin-bottom: 24px; 
         line-height: 1.4;
@@ -192,7 +192,7 @@ st.markdown(f"""
             Based on current velocity, "<b>Art Enthusiasts</b>" exhibit a <b>92% compatibility</b> with premium cosmetic curated offerings.
         </div>
         <div style='background-color: {APPLE_PALETTE['system_blue']}; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 10px;'>RECOMMENDED ACTION PLAN</div>
-        <div style='font-size: 18px; color: {APPLE_PALETTE['primary_content']}; margin-bottom: 12px; border-left: 3px solid {APPLE_PALETTE['system_blue']}; padding-left: 16px; font-weight: 500;'>1. 주요 미술관 및 갤러리 내 'Art-Beauty' 전용 팝업 큐레이션 존 구성</div>
-        <div style='font-size: 18px; color: {APPLE_PALETTE['primary_content']}; margin-bottom: 12px; border-left: 3px solid {APPLE_PALETTE['system_blue']}; padding-left: 16px; font-weight: 500;'>2. 인사동, 성수동 등 '예술 테마' 지역 대상 초정밀 타겟팅 광고 집행</div>
+        <div class='action-item'>1. 주요 미술관 및 갤러리 내 'Art-Beauty' 전용 팝업 큐레이션 존 구성</div>
+        <div class='action-item'>2. 인사동, 성수동 등 '예술 테마' 지역 대상 초정밀 타겟팅 광고 집행</div>
     </div>
 """, unsafe_allow_html=True)
