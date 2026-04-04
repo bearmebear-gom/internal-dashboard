@@ -102,7 +102,11 @@ st.markdown(f"""
     }}
     
     .section-desc {{
-        font-size: 22px; color: {APPLE_PALETTE['secondary_content']}; margin-bottom: 24px; line-height: 1.5;
+        font-size: 32px !important; /* Exactly half of h1 (64px) per user request */
+        color: {APPLE_PALETTE['secondary_content']}; 
+        margin-bottom: 24px; 
+        line-height: 1.4;
+        font-weight: 400;
     }}
 
     .section-label {{
@@ -116,7 +120,7 @@ st.markdown(f"""
     }}
 
     hr.apple-hr {{
-        border: 0; height: 1px; background: {APPLE_PALETTE['background_tertiary']}; margin: 2px 0;
+        border: 0; height: 1.5px; background: {APPLE_PALETTE['background_tertiary']}; margin: 24px 0;
     }}
     </style>
     """, unsafe_allow_html=True)
@@ -127,6 +131,7 @@ st.markdown("<p class='subtitle'>Comprehensive Market Analysis & Persona Insight
 
 # 1. Executive Summary
 st.markdown("<div class='section-label'>EXECUTIVE SUMMARY</div>", unsafe_allow_html=True)
+st.markdown("<hr class='apple-hr'>", unsafe_allow_html=True) # Line under section title
 st.markdown("<p class='section-desc'>글로벌 시장의 전반적인 성장성과 고객 유지율, 전환율, 충성도 지표의 통합 요약입니다. </p>", unsafe_allow_html=True)
 
 m1, m2, m3, m4 = st.columns(4)
@@ -143,7 +148,7 @@ with m4:
     st.plotly_chart(render_progress_ring(92, APPLE_PALETTE['system_gray']), use_container_width=True)
     st.markdown(f"<p class='metric-label'>AGGREGATED LOYALTY</p>", unsafe_allow_html=True)
 
-# Regional KPI (Tightly connected to Executive Summary)
+# Regional KPI
 st.markdown("<h2 style='margin-top: 50px !important;'>Regional Key Performance Indicators</h2>", unsafe_allow_html=True)
 st.markdown("<p class='section-desc'>국가별 주요 KPI 성과를 심층 비교 분석합니다.</p>", unsafe_allow_html=True)
 fig_metrics = px.bar(ndf, x='Metric', y='Value', color='Nation', barmode='group', text_auto='.1s')
@@ -183,7 +188,7 @@ st.markdown("<p class='section-desc'>AI 알고리즘이 감지한 신규 페르�
 st.markdown(f"""
     <div style='background: {APPLE_PALETTE['background_secondary']}; padding: 48px; border-radius: 28px;'>
         <div style='font-size: 20px; font-weight: 700; color: {APPLE_PALETTE['primary_content']}; margin-bottom: 16px;'>NEW INTELLIGENCE INSIGHT</div>
-        <div style='font-size: 22px; color: {APPLE_PALETTE['secondary_content']}; line-height: 1.6; margin-bottom: 32px;'>
+        <div style='font-size: 32px; color: {APPLE_PALETTE['secondary_content']}; line-height: 1.4; margin-bottom: 32px;'>
             Based on current velocity, "<b>Art Enthusiasts</b>" exhibit a <b>92% compatibility</b> with premium cosmetic curated offerings.
         </div>
         <div style='background-color: {APPLE_PALETTE['system_blue']}; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 10px;'>RECOMMENDED ACTION PLAN</div>
