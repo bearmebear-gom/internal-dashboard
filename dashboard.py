@@ -79,7 +79,7 @@ def render_progress_ring(value, color=APPLE_PALETTE['system_blue']):
         textinfo='none', hoverinfo='none', sort=False
     ))
     fig.update_layout(
-        showlegend=False, margin=dict(t=0, b=0, l=0, r=0), height=140,
+        showlegend=False, margin=dict(t=0, b=0, l=0, r=0), height=220,
         paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
         annotations=[dict(text=f'{value}%', x=0.5, y=0.5, font=dict(size=22, family="'SF Pro Display', sans-serif", color=APPLE_PALETTE['primary_content']), showarrow=False)]
     )
@@ -102,7 +102,7 @@ st.markdown(f"""
     }}
     
     .section-desc {{
-        font-size: 16px; color: {APPLE_PALETTE['secondary_content']}; margin-bottom: 60px; line-height: 1.5;
+        font-size: 16px; color: {APPLE_PALETTE['secondary_content']}; margin-bottom: 24px; line-height: 1.5;
     }}
 
     .section-label {{
