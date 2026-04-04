@@ -102,7 +102,7 @@ st.markdown(f"""
     }}
     
     .section-desc {{
-        font-size: 16px; color: {APPLE_PALETTE['secondary_content']}; margin-bottom: 24px; line-height: 1.5;
+        font-size: 22px; color: {APPLE_PALETTE['secondary_content']}; margin-bottom: 24px; line-height: 1.5;
     }}
 
     .section-label {{
